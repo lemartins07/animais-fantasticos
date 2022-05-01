@@ -18,8 +18,7 @@ export default function initAnimaNumeros() {
     })
   }
 
-  function handleMutation(mutation) {
-    console.log(mutation[0]);
+  function handleMutation(mutation) {    
     if(mutation[0].target.classList.contains('ativo')){
       observer.disconnect();
       animaNumeros();
