@@ -27,5 +27,5 @@ export default function initFetchAnimais() {
     }
   }
 
-  fetchAnimais('../../public/animaisapi.json');
+  fetchAnimais('./../animaisapi.json');
 }
