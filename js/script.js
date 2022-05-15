@@ -3,7 +3,7 @@ import Accordion from './modules/accordion.js';
 import TabNav from './modules/tabnav.js';
 import Modal from './modules/modal.js';
 import ToolTip from './modules/tooltip.js';
-import initDropDownMenu from './modules/dropdown-menu.js';
+import DropDownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initiFuncionamento from './modules/funcionamento.js';
 import fetchAnimais from './modules/fetch-animais.js';
@@ -28,9 +28,11 @@ toolTip.init();
 const scrollAnimation = new ScrollAnimation('[data-anime="scroll"]');
 scrollAnimation.init();
 
+const dropDownMenu = new DropDownMenu('[data-dropdown]', ['click', 'touchstart']);
+dropDownMenu.init();
+
 fetchAnimais('../../animaisapi.json', '.numeros-grid');
 fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
 
-initDropDownMenu();
 initMenuMobile();
 initiFuncionamento();
