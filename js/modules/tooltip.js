@@ -49,5 +49,6 @@ export default class ToolTip {
     if (this.tooltips.length) {
       this.addToolTipsEvent();
     }
+    return this;
   }
 }
