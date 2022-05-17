@@ -37,5 +37,13 @@ menuMobile.init();
 const funcionamento = new Funcionamento('[data-semana]');
 funcionamento.init();
 
-fetchAnimais('../../animaisapi.json', '.numeros-grid');
+let urlAnimaisApi;
+
+if (location.hostname === '127.0.0.1') {
+  urlAnimaisApi = '../public/animaisapi.json';
+} else {
+  urlAnimaisApi = './animaisapi.json';
+}
+
+fetchAnimais(urlAnimaisApi, '.numeros-grid');
 fetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
